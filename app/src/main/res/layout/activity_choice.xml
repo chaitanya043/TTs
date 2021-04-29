@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChoiceActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Text to Speech"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/stt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Speech to Text"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"/>
+
+</LinearLayout>

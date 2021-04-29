@@ -1,7 +1,6 @@
 package com.example.texttospeechapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.text.TextUtils;
@@ -10,13 +9,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.util.Locale;
-
 public class MainActivity extends AppCompatActivity {
 
     EditText etInput;
     Button bgConvert,bgClear;
-
     TextToSpeech textToSpeech;
 
     @Override
@@ -27,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         etInput = (EditText) findViewById(R.id.et_input);
         bgConvert = (Button) findViewById(R.id.bt_convert);
         bgClear = (Button) findViewById(R.id.bt_clear);
+
+
 
         textToSpeech = new TextToSpeech(getApplicationContext()
                 , new TextToSpeech.OnInitListener() {
@@ -79,5 +77,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 
 }
