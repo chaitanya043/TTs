@@ -1,4 +1,4 @@
-package com.example.texttospeechapp;
+package com.tts.texttospeechapp;
 
 import org.junit.Test;
 
