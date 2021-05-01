@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashActivity">
+    tools:context=".SplashActivity"
+    >
 
     <ImageView
         android:id="@+id/splashimg"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/splash">
+        android:src="@drawable/logo">
 
     </ImageView>
 
@@ -21,9 +22,9 @@
         android:text="Text to speech"
         android:layout_marginTop="530dp"
         android:textColor="@color/purple_200"
-        android:textStyle="bold"
-        android:layout_marginLeft="70dp"
-        android:textSize="40sp"/>
+        android:textStyle="italic"
+        android:layout_marginLeft="100dp"
+        android:textSize="30sp"/>
 
 
 </RelativeLayout>

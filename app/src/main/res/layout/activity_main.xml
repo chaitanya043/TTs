@@ -7,7 +7,8 @@
     android:orientation="vertical"
     android:padding="20dp"
     android:gravity="center"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/Background">
 
 
 
@@ -35,7 +36,7 @@
             android:layout_weight="1"
             android:id="@+id/bt_convert"
             android:text="Convert"
-            android:textColor="@color/black"
+            android:textColor="@color/Textcolor"
             android:textStyle="bold"
             android:background="@drawable/bg_round"/>
 
@@ -49,7 +50,7 @@
             android:layout_weight="1"
             android:id="@+id/bt_clear"
             android:text="Clear"
-            android:textColor="@color/black"
+            android:textColor="@color/Textcolor"
             android:textStyle="bold"
             android:background="@drawable/bg_round"/>
 
@@ -64,7 +65,7 @@
         android:id="@+id/adView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="100dp"
         app:adSize="BANNER"
         app:adUnitId="ca-app-pub-3781793151159409/7505478329">
 
