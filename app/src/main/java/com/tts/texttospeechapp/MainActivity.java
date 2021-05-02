@@ -1,25 +1,24 @@
 package com.tts.texttospeechapp;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.getDefaultNightMode());
+
         setContentView(R.layout.activity_main);
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
@@ -56,14 +57,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onInit(int i) {
 
-                String et = etInput.getText().toString();
-
-                if (TextUtils.isEmpty(et)) {
-
-                    Toast.makeText(MainActivity.this, "Please Enter Text...", Toast.LENGTH_SHORT).show();
-
+                if (i != TextToSpeech.ERROR) {
+                    textToSpeech.setLanguage(Locale.UK);
                 }
-
             }
 
 
@@ -85,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
 
                     int speech = textToSpeech.speak(s, TextToSpeech.QUEUE_FLUSH, null);
+
 
                 }
 
