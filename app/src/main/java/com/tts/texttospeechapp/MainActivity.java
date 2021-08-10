@@ -32,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.getDefaultNightMode());
-
         setContentView(R.layout.activity_main);
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
@@ -41,9 +39,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+
 
 
         etInput = (EditText) findViewById(R.id.et_input);

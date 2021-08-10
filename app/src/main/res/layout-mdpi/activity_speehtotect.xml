@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
-        android:text="Click on Mic symbol to speech..."
+        android:text="Click on Mic symbol \nto speak..."
         android:textSize="20sp"/>
 
 

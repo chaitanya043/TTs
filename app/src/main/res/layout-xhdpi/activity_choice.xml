@@ -6,56 +6,82 @@
     android:layout_height="match_parent"
     tools:context=".ChoiceActivity"
     android:orientation="vertical"
-    android:padding="15dp">
+    android:padding="15dp"
+    android:background="@color/white">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/crd1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
+        android:layout_height="120dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="20dp">
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:background="#ffd700"
+            android:padding="10dp">
 
             <TextView
-                android:id="@+id/tts"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Text to Speech"
+                android:textSize="25sp"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:textSize="25sp"
-                android:layout_marginTop="30dp"
-                android:padding="10dp"
-                android:background="@drawable/round"/>
-            <TextView
-                android:id="@+id/stt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Speech to Text"
-                android:textStyle="bold"
-                android:textColor="#ffffff"
-                android:textSize="25sp"
-                android:padding="10dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/round2"/>
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"/>
 
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:maxHeight="100dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/tts" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3781793151159409/7505478329">
-    </com.google.android.gms.ads.AdView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/crd2"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#808080"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Speech to Text"
+                android:textSize="25sp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"/>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:maxHeight="100dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/stt" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 
-    </LinearLayout>
+
+
+
+
+</LinearLayout>
 
 
